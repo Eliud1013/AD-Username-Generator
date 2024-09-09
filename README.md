@@ -24,13 +24,13 @@ And so on. This tool can be very useful while playing CTFs, due generating this 
 1. Clone the repository:
 
 ```bash
-git clone
+git clone https://github.com/Eliud1013/AD-Username-Generator
 ```
 
 2. Install dependencies
 
 ```bash
-cd <project path>; npm install
+cd <repository path>; npm install
 ```
 
 3. Generate your wordlists:D
