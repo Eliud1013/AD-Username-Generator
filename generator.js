@@ -66,7 +66,10 @@ function saveFile() {
   if (args.output) {
     try {
       fs.writeFileSync(args.output, bytes);
-      "\n[!]".blue + ` Wordlist saved in `.white + output.green + "\n";
+
+      console.log(
+        "[*] ".blue + "Wordlist saved in ".white + "" + args.output.green + "\n"
+      );
     } catch (e) {
       if (e.code == "EACCES")
         console.error(`[X] You don't write permissions on ${args.output}`);
@@ -80,7 +83,7 @@ function saveFile() {
     );
   }
   console.log("Provided Wordlist lines: ".white + wordlist.length);
-  console.log("Output Wordlist lines: ".white + output_wordlist.length);
+  console.log("Output Wordlist lines: ".white + (output_wordlist.length - 1));
 }
 
 applyTransformations();
